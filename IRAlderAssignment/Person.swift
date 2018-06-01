@@ -8,15 +8,15 @@
 
 import Foundation
 public class Person: NSObject {
-    public var id: String!
-    public var firstName: String!
-    public var lastName: String!
-    public var birthDate: String!
-    public var profilePicture: String!
-    public var forceSensitive: String!
-    public var affiliation: String!
+    public var id: String
+    public var firstName: String
+    public var lastName: String
+    public var birthDate: String
+    public var profilePicture: String
+    public var forceSensitive: Bool
+    public var affiliation: String
     
-    public init(id: String, firstName: String, lastName: String, birthDate: String, profilePicture: String, forceSensitive: String, affiliation: String) {
+    public init(id: String, firstName: String, lastName: String, birthDate: String, profilePicture: String, forceSensitive: Bool, affiliation: String) {
         
         self.id = id
         self.firstName = firstName

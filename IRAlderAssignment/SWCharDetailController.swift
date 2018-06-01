@@ -47,9 +47,9 @@ class SWCharDetailController: UIViewController {
             self.imageView.image = imagex
             //setting up labels to display the information
             self.nameLabel.text = "\(person?.firstName ?? "") \(person?.lastName ?? "")"
-            self.birthDateLabel.text = "\(person?.birthDate ?? "")"
-            self.affiliationLabel.text = "\(person?.affiliation ?? "")"
-            self.forceLabel.text = "\(person?.forceSensetive ?? 0)"
+            self.birthDateLabel.text = "DOB: \(person?.birthDate ?? "")"
+            self.affiliationLabel.text = "Affiliation: \(person?.affiliation ?? "")"
+            self.forceLabel.text = "Force?: \(person?.forceSensetive ?? false)"
         } catch let error{
             print("failed to fetch user \(error)")
         }

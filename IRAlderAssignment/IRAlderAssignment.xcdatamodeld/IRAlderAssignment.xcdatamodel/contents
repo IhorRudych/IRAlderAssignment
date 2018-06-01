@@ -4,7 +4,7 @@
         <attribute name="affiliation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="birthDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="forceSensetive" optional="YES" attributeType="Integer 16" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="forceSensetive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profilePicture" optional="YES" attributeType="Binary" syncable="YES"/>

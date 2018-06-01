@@ -16,7 +16,6 @@
 		832FD47F20BFB08200683EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832FD47D20BFB08200683EB2 /* LaunchScreen.storyboard */; };
 		832FD48A20BFB08200683EB2 /* IRAlderAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD48920BFB08200683EB2 /* IRAlderAssignmentTests.swift */; };
 		832FD49520BFB08200683EB2 /* IRAlderAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD49420BFB08200683EB2 /* IRAlderAssignmentUITests.swift */; };
-		832FD4A320BFB2B300683EB2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD4A220BFB2B300683EB2 /* CustomCell.swift */; };
 		832FD4A720BFB52A00683EB2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD4A620BFB52A00683EB2 /* Person.swift */; };
 		832FD4A920BFB98D00683EB2 /* SWCharDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD4A820BFB98D00683EB2 /* SWCharDetailController.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 		832FD49020BFB08200683EB2 /* IRAlderAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRAlderAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FD49420BFB08200683EB2 /* IRAlderAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRAlderAssignmentUITests.swift; sourceTree = "<group>"; };
 		832FD49620BFB08200683EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		832FD4A220BFB2B300683EB2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		832FD4A620BFB52A00683EB2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		832FD4A820BFB98D00683EB2 /* SWCharDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCharDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +107,6 @@
 			children = (
 				832FD47120BFB07E00683EB2 /* AppDelegate.swift */,
 				832FD47320BFB07E00683EB2 /* ViewController.swift */,
-				832FD4A220BFB2B300683EB2 /* CustomCell.swift */,
 				832FD47520BFB07E00683EB2 /* Main.storyboard */,
 				831AC2EE20C189C50093AFAD /* CustomButton2.swift */,
 				832FD47B20BFB08200683EB2 /* Assets.xcassets */,
@@ -276,7 +273,6 @@
 				832FD4A920BFB98D00683EB2 /* SWCharDetailController.swift in Sources */,
 				831AC2EF20C189C50093AFAD /* CustomButton2.swift in Sources */,
 				832FD47420BFB07E00683EB2 /* ViewController.swift in Sources */,
-				832FD4A320BFB2B300683EB2 /* CustomCell.swift in Sources */,
 				832FD47220BFB07E00683EB2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

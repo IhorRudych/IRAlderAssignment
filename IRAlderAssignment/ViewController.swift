@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     var personID:UUID!
     
+    var force:String! = "Unknown"
+    
     var refreshCtrl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
@@ -57,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         } catch  {
             fatalError("fetchresult controller failed to fetch data \(error)")
         }
-        //intiating refresh
+        //intiating refresh on fetchStars function
         self.refreshCtrl.addTarget(self, action: #selector (fetchStars), for: .valueChanged)
         
     }
@@ -71,13 +73,19 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         return (fetchedResultsController?.sections![section].objects!.count)!
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //intitiate the cell with identifier to reuse it for all objects
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        //grabing person information from coredata
         let person = fetchedResultsController?.object(at: indexPath) as! SWCharacter
+        
+        //setting up cell
         cell.textLabel?.text = "\(person.firstName ?? "Uknown") \(person.lastName ?? "Uknown")"
         cell.detailTextLabel?.text = "\(person.affiliation ?? "Unknown")"
         //set profile picture in cell
         let img = UIImage(data:person.profilePicture!)
         cell.imageView?.image = img
+        //accessory
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
@@ -114,7 +122,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             do {
                 //lets get the data into JSON
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
-                    // some
+                    // some concurrency settings for memory management
                     DispatchQueue.main.async {
                         //We go to next function to parce JSON
                        self.parseJSONResult(json: json as AnyObject)
@@ -131,7 +139,6 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         
         //checking if results exist
         if let results = json["individuals"] as? [[String: AnyObject]] {
-            print(results)
             //looping through JSON to get values
             for result in results {
                 
@@ -141,7 +148,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 let lastName = result["lastName"] as? String ?? ""
                 let dateOfBirth = result["birthdate"] as? String ?? ""
                 let profilePicture = result["profilePicture"] as? String ?? ""
-                let forceSensitive = result["forceSensitive"] as? String ?? ""
+                let forceSensitive = result["forceSensitive"] as? Bool ?? false
+                
                 let affiliation = result["affiliation"] as? String ?? ""
                 
                 
@@ -159,7 +167,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 let birth = self.person?.birthDate
                 let url = URL(string:profilePicture)
                 let imgdata = try? Data(contentsOf: url!)
-                let force = Int((self.person?.forceSensitive)!)
+                let force = forceSensitive
                 let affili = self.person?.affiliation
                 
                 //New Person added to CoreData
@@ -196,7 +204,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             
         }
     }
-    //This one is just to refresh the content of Table view when data is updated.
+    //This one is just to refresh the content of Tableview when data is updated.
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.reloadData()
     }
