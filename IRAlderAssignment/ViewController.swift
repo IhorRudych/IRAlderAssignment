@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     var person:Person?
     
-    var personID:Int?
+    var personID:UUID!
     
     var refreshCtrl = UIRefreshControl()
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         self.tableView.dataSource = self
         self.tableView.refreshControl = refreshCtrl
         
-        //grab users from CoreData
+        //grab data from CoreData
         let context:NSManagedObjectContext = self.managedObjectContext!
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SWCharacter")
@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         }
         //intiating refresh
         self.refreshCtrl.addTarget(self, action: #selector (fetchStars), for: .valueChanged)
+        
     }
     
     
@@ -73,7 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
         let person = fetchedResultsController?.object(at: indexPath) as! SWCharacter
         cell.textLabel?.text = "\(person.firstName ?? "Uknown") \(person.lastName ?? "Uknown")"
-       
+        cell.detailTextLabel?.text = "\(person.affiliation ?? "Unknown")"
         //set profile picture in cell
         let img = UIImage(data:person.profilePicture!)
         cell.imageView?.image = img
@@ -82,11 +83,13 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = fetchedResultsController?.object(at: indexPath) as! SWCharacter
-        self.personID = Int(person.id)
+        
+        self.personID = person.id
+        //print(self.personID)
         self.performSegue(withIdentifier: "gotodetail", sender: tableView.cellForRow(at: indexPath))
     }
     
-    // download data from heroku
+    // download data triger
     
     @objc func fetchStars(_ sender:Any){
         
@@ -128,7 +131,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         
         //checking if results exist
         if let results = json["individuals"] as? [[String: AnyObject]] {
-            //print(results)
+            print(results)
             //looping through JSON to get values
             for result in results {
                 
@@ -149,11 +152,12 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 //insert JSON in core data
                 
                 //CoreData variables
-                let idx = Int((self.person?.id)!)
+                
+                let idx = UUID()
                 let name1 = self.person?.firstName
                 let name2 = self.person?.lastName
                 let birth = self.person?.birthDate
-                let url = URL(string: (self.person?.profilePicture)!)
+                let url = URL(string:profilePicture)
                 let imgdata = try? Data(contentsOf: url!)
                 let force = Int((self.person?.forceSensitive)!)
                 let affili = self.person?.affiliation
@@ -173,8 +177,6 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                     print("failed to save downloaded users \(error)")
                 }
             }
-            
-            
         }
             
         else {
@@ -190,7 +192,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         
         if segue.identifier == "gotodetail"{
             let detail:SWCharDetailController = segue.destination as! SWCharDetailController
-            detail.personID = self.personID
+            detail.personID = personID
             
         }
     }
