@@ -7,7 +7,7 @@
         <attribute name="forceSensetive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="profilePicture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="profilePicture" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="SWCharacter" positionX="-45" positionY="0" width="128" height="150"/>

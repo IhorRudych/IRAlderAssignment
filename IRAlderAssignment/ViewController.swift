@@ -9,13 +9,12 @@
 import UIKit
 import CoreData
 
+
 class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, NSFetchedResultsControllerDelegate {
     // coredata variables
     let managedObjectContext:NSManagedObjectContext? = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedResultsController:NSFetchedResultsController<NSFetchRequestResult>?
     // fetch variables
-    
-    
     var person:Person?
     
     var personID:UUID!
@@ -24,12 +23,14 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     var refreshCtrl = UIRefreshControl()
     
+    var imageCache = NSCache<AnyObject, AnyObject>()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //tableView and refresh setup
-        self.refreshCtrl.tintColor = UIColor(red:0.75, green:0.52, blue:0.25, alpha:1.0)
+        //self.refreshCtrl.tintColor = UIColor(red:0.75, green:0.52, blue:0.25, alpha:1.0)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.refreshControl = refreshCtrl
@@ -60,21 +61,29 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             fatalError("fetchresult controller failed to fetch data \(error)")
         }
         //intiating refresh on fetchStars function
-        self.refreshCtrl.addTarget(self, action: #selector (fetchStars), for: .valueChanged)
-        
+        //self.refreshCtrl.addTarget(self, action: #selector (fetchStars), for: .valueChanged)
+        self.fetchStars()
     }
     
     
     //tableView overrides
     func numberOfSections(in tableView: UITableView) -> Int {
-        return (fetchedResultsController?.sections?.count)!
+        guard let section = fetchedResultsController?.sections?.count else {
+            return 0
+        }
+        return section
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (fetchedResultsController?.sections![section].objects!.count)!
+        guard let sections = fetchedResultsController?.sections else {
+            return 0
+        }
+        
+        let sect = sections[section]
+        return sect.numberOfObjects
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //intitiate the cell with identifier to reuse it for all objects
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+       let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
         //grabing person information from coredata
         let person = fetchedResultsController?.object(at: indexPath) as! SWCharacter
         
@@ -82,12 +91,21 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         cell.textLabel?.text = "\(person.firstName ?? "Uknown") \(person.lastName ?? "Uknown")"
         cell.detailTextLabel?.text = "\(person.affiliation ?? "Unknown")"
         //set profile picture in cell
-        let img = UIImage(data:person.profilePicture!)
-        cell.imageView?.image = img
+        let url = URL(string: person.profilePicture!)
+        
+        let imgdata = NSData(contentsOf: url!)
+        let img = UIImage(data: imgdata! as Data)
+        self.imageCache.setObject(img!, forKey: "gert359" as AnyObject)
+        DispatchQueue.main.async {
+           
+            cell.imageView?.image = img
+        }
+    
         //accessory
         cell.accessoryType = .disclosureIndicator
         
         return cell
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = fetchedResultsController?.object(at: indexPath) as! SWCharacter
@@ -99,8 +117,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     // download data triger
     
-    @objc func fetchStars(_ sender:Any){
-        
+     func fetchStars(){
+        self.refreshCtrl.beginRefreshing()
         //erase existing data in coredata
         let context:NSManagedObjectContext = self.managedObjectContext!
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SWCharacter")
@@ -116,6 +134,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         //grab data from heroku
         let endPoint = "https://starwarstest16.herokuapp.com/api/characters"
         guard let url = URL(string: endPoint) else { return }
+        //DispatchQueue.main.async {
+    
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else { return }
             guard let data = data else { return }
@@ -123,16 +143,19 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 //lets get the data into JSON
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
                     // some concurrency settings for memory management
-                    DispatchQueue.main.async {
+                    //DispatchQueue.main.async {
                         //We go to next function to parce JSON
                        self.parseJSONResult(json: json as AnyObject)
                         
-                    }}
+                    //}
+                
+            }
                 
             } catch let error {
                 print("Can't serialize JSON:\(error)")
             }
             }.resume()
+       
     }
     private func parseJSONResult(json: AnyObject){
         let context:NSManagedObjectContext = self.managedObjectContext!
@@ -165,8 +188,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 let name1 = self.person?.firstName
                 let name2 = self.person?.lastName
                 let birth = self.person?.birthDate
-                let url = URL(string:profilePicture)
-                let imgdata = try? Data(contentsOf: url!)
+                
+                let imgdata = self.person?.profilePicture
                 let force = forceSensitive
                 let affili = self.person?.affiliation
                 

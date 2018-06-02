@@ -43,7 +43,9 @@ class SWCharDetailController: UIViewController {
             //grabing first and hopefully only one object from that array
             let person = stars.first
             //setting up an image to display
-            let imagex = UIImage(data: (person?.profilePicture!)!)
+            let url = URL(string: (person?.profilePicture)!)
+            let imgdata = NSData(contentsOf: url!)
+            let imagex = UIImage(data: imgdata! as Data)
             self.imageView.image = imagex
             //setting up labels to display the information
             self.nameLabel.text = "\(person?.firstName ?? "") \(person?.lastName ?? "")"
