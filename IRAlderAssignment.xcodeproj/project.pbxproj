@@ -18,6 +18,9 @@
 		832FD49520BFB08200683EB2 /* IRAlderAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD49420BFB08200683EB2 /* IRAlderAssignmentUITests.swift */; };
 		832FD4A720BFB52A00683EB2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD4A620BFB52A00683EB2 /* Person.swift */; };
 		832FD4A920BFB98D00683EB2 /* SWCharDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD4A820BFB98D00683EB2 /* SWCharDetailController.swift */; };
+		9CDBD658FF8B7AADA0B657BB /* Pods_IRAlderAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDE5A4FA4F0AF1CF8D9E851 /* Pods_IRAlderAssignment.framework */; };
+		AC40DB0EC792299BB2DB7F55 /* Pods_IRAlderAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A151A05D21E98B32CB3C7423 /* Pods_IRAlderAssignmentUITests.framework */; };
+		BF7931EFD7721185C9AACA3E /* Pods_IRAlderAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A7B84FC50FAAD57504C2A3 /* Pods_IRAlderAssignmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F4340F31F3D425BEAB0D982 /* Pods-IRAlderAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignmentTests/Pods-IRAlderAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		227F1236F9AF3904BC2C0100 /* Pods-IRAlderAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignmentUITests/Pods-IRAlderAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3EDE5A4FA4F0AF1CF8D9E851 /* Pods_IRAlderAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRAlderAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		570212B38A0F6BAEE0553AE4 /* Pods-IRAlderAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignment/Pods-IRAlderAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		63A7B84FC50FAAD57504C2A3 /* Pods_IRAlderAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRAlderAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831AC2EE20C189C50093AFAD /* CustomButton2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
 		832FD46E20BFB07E00683EB2 /* IRAlderAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRAlderAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FD47120BFB07E00683EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,11 @@
 		832FD49620BFB08200683EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832FD4A620BFB52A00683EB2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		832FD4A820BFB98D00683EB2 /* SWCharDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCharDetailController.swift; sourceTree = "<group>"; };
+		833AD94F20C2DCEB002593B0 /* IRAlderAssignment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRAlderAssignment-Bridging-Header.h"; sourceTree = "<group>"; };
+		9E44FCD8AF3966C2BF292C1F /* Pods-IRAlderAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignmentUITests/Pods-IRAlderAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A151A05D21E98B32CB3C7423 /* Pods_IRAlderAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRAlderAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A754D2DBED2501C430727D35 /* Pods-IRAlderAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignment/Pods-IRAlderAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		CCBBB07DE3D3FE16116970F7 /* Pods-IRAlderAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignmentTests/Pods-IRAlderAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDBD658FF8B7AADA0B657BB /* Pods_IRAlderAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7931EFD7721185C9AACA3E /* Pods_IRAlderAssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +91,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC40DB0EC792299BB2DB7F55 /* Pods_IRAlderAssignmentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202F4B2D6C3A92459001AF66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A754D2DBED2501C430727D35 /* Pods-IRAlderAssignment.debug.xcconfig */,
+				570212B38A0F6BAEE0553AE4 /* Pods-IRAlderAssignment.release.xcconfig */,
+				CCBBB07DE3D3FE16116970F7 /* Pods-IRAlderAssignmentTests.debug.xcconfig */,
+				1F4340F31F3D425BEAB0D982 /* Pods-IRAlderAssignmentTests.release.xcconfig */,
+				227F1236F9AF3904BC2C0100 /* Pods-IRAlderAssignmentUITests.debug.xcconfig */,
+				9E44FCD8AF3966C2BF292C1F /* Pods-IRAlderAssignmentUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		832FD46520BFB07E00683EB2 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +118,8 @@
 				832FD48820BFB08200683EB2 /* IRAlderAssignmentTests */,
 				832FD49320BFB08200683EB2 /* IRAlderAssignmentUITests */,
 				832FD46F20BFB07E00683EB2 /* Products */,
+				202F4B2D6C3A92459001AF66 /* Pods */,
+				EBD30B034F71FE02107F4E91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +146,7 @@
 				832FD47820BFB07E00683EB2 /* IRAlderAssignment.xcdatamodeld */,
 				832FD4A620BFB52A00683EB2 /* Person.swift */,
 				832FD4A820BFB98D00683EB2 /* SWCharDetailController.swift */,
+				833AD94F20C2DCEB002593B0 /* IRAlderAssignment-Bridging-Header.h */,
 			);
 			path = IRAlderAssignment;
 			sourceTree = "<group>";
@@ -137,6 +169,16 @@
 			path = IRAlderAssignmentUITests;
 			sourceTree = "<group>";
 		};
+		EBD30B034F71FE02107F4E91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EDE5A4FA4F0AF1CF8D9E851 /* Pods_IRAlderAssignment.framework */,
+				63A7B84FC50FAAD57504C2A3 /* Pods_IRAlderAssignmentTests.framework */,
+				A151A05D21E98B32CB3C7423 /* Pods_IRAlderAssignmentUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 832FD49920BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment" */;
 			buildPhases = (
+				C32199EB9E380E61EF6280D6 /* [CP] Check Pods Manifest.lock */,
 				832FD46A20BFB07E00683EB2 /* Sources */,
 				832FD46B20BFB07E00683EB2 /* Frameworks */,
 				832FD46C20BFB07E00683EB2 /* Resources */,
+				BA73CECA90718EDAA1F1AA21 /* [CP] Embed Pods Frameworks */,
+				461CFADB4B6C7757E87BB489 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 832FD49C20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignmentTests" */;
 			buildPhases = (
+				976EE83C28AA62D89234D272 /* [CP] Check Pods Manifest.lock */,
 				832FD48120BFB08200683EB2 /* Sources */,
 				832FD48220BFB08200683EB2 /* Frameworks */,
 				832FD48320BFB08200683EB2 /* Resources */,
+				6A44048B13C2520D8F9EBF5B /* [CP] Embed Pods Frameworks */,
+				0DF0092DC668A055A0915DC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 832FD49F20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignmentUITests" */;
 			buildPhases = (
+				4A9E01914D0C17F4F822DBB7 /* [CP] Check Pods Manifest.lock */,
 				832FD48C20BFB08200683EB2 /* Sources */,
 				832FD48D20BFB08200683EB2 /* Frameworks */,
 				832FD48E20BFB08200683EB2 /* Resources */,
+				8C2B0B46B52B02A6C34C06FD /* [CP] Embed Pods Frameworks */,
+				EBC10659FF20F0BEF192B87E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +256,7 @@
 				TargetAttributes = {
 					832FD46D20BFB07E00683EB2 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0940;
 					};
 					832FD48420BFB08200683EB2 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -262,6 +314,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DF0092DC668A055A0915DC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignmentTests/Pods-IRAlderAssignmentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		461CFADB4B6C7757E87BB489 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignment/Pods-IRAlderAssignment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A9E01914D0C17F4F822DBB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IRAlderAssignmentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A44048B13C2520D8F9EBF5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignmentTests/Pods-IRAlderAssignmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C2B0B46B52B02A6C34C06FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignmentUITests/Pods-IRAlderAssignmentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		976EE83C28AA62D89234D272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IRAlderAssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA73CECA90718EDAA1F1AA21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignment/Pods-IRAlderAssignment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignment/Pods-IRAlderAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C32199EB9E380E61EF6280D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IRAlderAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC10659FF20F0BEF192B87E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IRAlderAssignmentUITests/Pods-IRAlderAssignmentUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		832FD46A20BFB07E00683EB2 /* Sources */ = {
@@ -444,14 +646,21 @@
 		};
 		832FD49A20BFB08200683EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A754D2DBED2501C430727D35 /* Pods-IRAlderAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6J58KJAP4;
 				INFOPLIST_FILE = IRAlderAssignment/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coristic.IRAlderAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IRAlderAssignment/IRAlderAssignment-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,14 +668,20 @@
 		};
 		832FD49B20BFB08200683EB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 570212B38A0F6BAEE0553AE4 /* Pods-IRAlderAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6J58KJAP4;
 				INFOPLIST_FILE = IRAlderAssignment/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coristic.IRAlderAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IRAlderAssignment/IRAlderAssignment-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -474,13 +689,18 @@
 		};
 		832FD49D20BFB08200683EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCBBB07DE3D3FE16116970F7 /* Pods-IRAlderAssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6J58KJAP4;
 				INFOPLIST_FILE = IRAlderAssignmentTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coristic.IRAlderAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,13 +711,18 @@
 		};
 		832FD49E20BFB08200683EB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4340F31F3D425BEAB0D982 /* Pods-IRAlderAssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6J58KJAP4;
 				INFOPLIST_FILE = IRAlderAssignmentTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coristic.IRAlderAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -508,12 +733,17 @@
 		};
 		832FD4A020BFB08200683EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 227F1236F9AF3904BC2C0100 /* Pods-IRAlderAssignmentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6J58KJAP4;
 				INFOPLIST_FILE = IRAlderAssignmentUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coristic.IRAlderAssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -524,12 +754,17 @@
 		};
 		832FD4A120BFB08200683EB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E44FCD8AF3966C2BF292C1F /* Pods-IRAlderAssignmentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6J58KJAP4;
 				INFOPLIST_FILE = IRAlderAssignmentUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coristic.IRAlderAssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -21,19 +21,19 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     var force:String! = "Unknown"
     
-    var refreshCtrl = UIRefreshControl()
+    //var refreshCtrl = UIRefreshControl()
     
-    var imageCache = NSCache<AnyObject, AnyObject>()
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //tableView and refresh setup
-        //self.refreshCtrl.tintColor = UIColor(red:0.75, green:0.52, blue:0.25, alpha:1.0)
+       // self.refreshCtrl.tintColor = UIColor(red:0.75, green:0.52, blue:0.25, alpha:1.0)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.refreshControl = refreshCtrl
+       // self.tableView.refreshControl = refreshCtrl
         
         //grab data from CoreData
         let context:NSManagedObjectContext = self.managedObjectContext!
@@ -86,20 +86,13 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
         //grabing person information from coredata
         let person = fetchedResultsController?.object(at: indexPath) as! SWCharacter
-        
         //setting up cell
         cell.textLabel?.text = "\(person.firstName ?? "Uknown") \(person.lastName ?? "Uknown")"
         cell.detailTextLabel?.text = "\(person.affiliation ?? "Unknown")"
         //set profile picture in cell
         let url = URL(string: person.profilePicture!)
-        
-        let imgdata = NSData(contentsOf: url!)
-        let img = UIImage(data: imgdata! as Data)
-        self.imageCache.setObject(img!, forKey: "gert359" as AnyObject)
-        DispatchQueue.main.async {
-           
-            cell.imageView?.image = img
-        }
+        let imgview = cell.imageView
+        imgview?.sd_setImage(with: url, placeholderImage: UIImage(named: "images"), options: [.continueInBackground, .progressiveDownload])
     
         //accessory
         cell.accessoryType = .disclosureIndicator
@@ -118,7 +111,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     // download data triger
     
      func fetchStars(){
-        self.refreshCtrl.beginRefreshing()
+        //self.refreshCtrl.beginRefreshing()
         //erase existing data in coredata
         let context:NSManagedObjectContext = self.managedObjectContext!
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SWCharacter")
@@ -143,11 +136,11 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 //lets get the data into JSON
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
                     // some concurrency settings for memory management
-                    //DispatchQueue.main.async {
+                    DispatchQueue.main.async {
                         //We go to next function to parce JSON
                        self.parseJSONResult(json: json as AnyObject)
                         
-                    //}
+                    }
                 
             }
                 
@@ -181,14 +174,12 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 
                 
                 //insert JSON in core data
-                
                 //CoreData variables
                 
                 let idx = UUID()
                 let name1 = self.person?.firstName
                 let name2 = self.person?.lastName
                 let birth = self.person?.birthDate
-                
                 let imgdata = self.person?.profilePicture
                 let force = forceSensitive
                 let affili = self.person?.affiliation
@@ -214,7 +205,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             print("Error! Unable to parse the JSON")
             
         }
-        self.refreshCtrl.endRefreshing()
+       // self.refreshCtrl.endRefreshing()
     }
     
     //pass data to controllers

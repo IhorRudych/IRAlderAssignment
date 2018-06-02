@@ -44,9 +44,7 @@ class SWCharDetailController: UIViewController {
             let person = stars.first
             //setting up an image to display
             let url = URL(string: (person?.profilePicture)!)
-            let imgdata = NSData(contentsOf: url!)
-            let imagex = UIImage(data: imgdata! as Data)
-            self.imageView.image = imagex
+            self.imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "Loading"), options: [.continueInBackground, .progressiveDownload], completed: nil)
             //setting up labels to display the information
             self.nameLabel.text = "\(person?.firstName ?? "") \(person?.lastName ?? "")"
             self.birthDateLabel.text = "DOB: \(person?.birthDate ?? "")"
