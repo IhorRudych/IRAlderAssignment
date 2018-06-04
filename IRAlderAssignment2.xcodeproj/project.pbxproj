@@ -47,7 +47,7 @@
 		570212B38A0F6BAEE0553AE4 /* Pods-IRAlderAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRAlderAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRAlderAssignment/Pods-IRAlderAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		63A7B84FC50FAAD57504C2A3 /* Pods_IRAlderAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IRAlderAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831AC2EE20C189C50093AFAD /* CustomButton2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
-		832FD46E20BFB07E00683EB2 /* IRAlderAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRAlderAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832FD46E20BFB07E00683EB2 /* IRAlderAssignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRAlderAssignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FD47120BFB07E00683EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832FD47320BFB07E00683EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		832FD47620BFB07E00683EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,10 +55,10 @@
 		832FD47B20BFB08200683EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832FD47E20BFB08200683EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		832FD48020BFB08200683EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		832FD48520BFB08200683EB2 /* IRAlderAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRAlderAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		832FD48520BFB08200683EB2 /* IRAlderAssignment2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRAlderAssignment2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FD48920BFB08200683EB2 /* IRAlderAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRAlderAssignmentTests.swift; sourceTree = "<group>"; };
 		832FD48B20BFB08200683EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		832FD49020BFB08200683EB2 /* IRAlderAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRAlderAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		832FD49020BFB08200683EB2 /* IRAlderAssignment2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRAlderAssignment2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FD49420BFB08200683EB2 /* IRAlderAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRAlderAssignmentUITests.swift; sourceTree = "<group>"; };
 		832FD49620BFB08200683EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832FD4A620BFB52A00683EB2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -126,9 +126,9 @@
 		832FD46F20BFB07E00683EB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				832FD46E20BFB07E00683EB2 /* IRAlderAssignment.app */,
-				832FD48520BFB08200683EB2 /* IRAlderAssignmentTests.xctest */,
-				832FD49020BFB08200683EB2 /* IRAlderAssignmentUITests.xctest */,
+				832FD46E20BFB07E00683EB2 /* IRAlderAssignment2.app */,
+				832FD48520BFB08200683EB2 /* IRAlderAssignment2Tests.xctest */,
+				832FD49020BFB08200683EB2 /* IRAlderAssignment2UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		832FD46D20BFB07E00683EB2 /* IRAlderAssignment */ = {
+		832FD46D20BFB07E00683EB2 /* IRAlderAssignment2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 832FD49920BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment" */;
+			buildConfigurationList = 832FD49920BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment2" */;
 			buildPhases = (
 				C32199EB9E380E61EF6280D6 /* [CP] Check Pods Manifest.lock */,
 				832FD46A20BFB07E00683EB2 /* Sources */,
@@ -197,14 +197,14 @@
 			);
 			dependencies = (
 			);
-			name = IRAlderAssignment;
+			name = IRAlderAssignment2;
 			productName = IRAlderAssignment;
-			productReference = 832FD46E20BFB07E00683EB2 /* IRAlderAssignment.app */;
+			productReference = 832FD46E20BFB07E00683EB2 /* IRAlderAssignment2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		832FD48420BFB08200683EB2 /* IRAlderAssignmentTests */ = {
+		832FD48420BFB08200683EB2 /* IRAlderAssignment2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 832FD49C20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignmentTests" */;
+			buildConfigurationList = 832FD49C20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment2Tests" */;
 			buildPhases = (
 				976EE83C28AA62D89234D272 /* [CP] Check Pods Manifest.lock */,
 				832FD48120BFB08200683EB2 /* Sources */,
@@ -218,14 +218,14 @@
 			dependencies = (
 				832FD48720BFB08200683EB2 /* PBXTargetDependency */,
 			);
-			name = IRAlderAssignmentTests;
+			name = IRAlderAssignment2Tests;
 			productName = IRAlderAssignmentTests;
-			productReference = 832FD48520BFB08200683EB2 /* IRAlderAssignmentTests.xctest */;
+			productReference = 832FD48520BFB08200683EB2 /* IRAlderAssignment2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		832FD48F20BFB08200683EB2 /* IRAlderAssignmentUITests */ = {
+		832FD48F20BFB08200683EB2 /* IRAlderAssignment2UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 832FD49F20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignmentUITests" */;
+			buildConfigurationList = 832FD49F20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment2UITests" */;
 			buildPhases = (
 				4A9E01914D0C17F4F822DBB7 /* [CP] Check Pods Manifest.lock */,
 				832FD48C20BFB08200683EB2 /* Sources */,
@@ -239,9 +239,9 @@
 			dependencies = (
 				832FD49220BFB08200683EB2 /* PBXTargetDependency */,
 			);
-			name = IRAlderAssignmentUITests;
+			name = IRAlderAssignment2UITests;
 			productName = IRAlderAssignmentUITests;
-			productReference = 832FD49020BFB08200683EB2 /* IRAlderAssignmentUITests.xctest */;
+			productReference = 832FD49020BFB08200683EB2 /* IRAlderAssignment2UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 832FD46920BFB07E00683EB2 /* Build configuration list for PBXProject "IRAlderAssignment" */;
+			buildConfigurationList = 832FD46920BFB07E00683EB2 /* Build configuration list for PBXProject "IRAlderAssignment2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -281,9 +281,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				832FD46D20BFB07E00683EB2 /* IRAlderAssignment */,
-				832FD48420BFB08200683EB2 /* IRAlderAssignmentTests */,
-				832FD48F20BFB08200683EB2 /* IRAlderAssignmentUITests */,
+				832FD46D20BFB07E00683EB2 /* IRAlderAssignment2 */,
+				832FD48420BFB08200683EB2 /* IRAlderAssignment2Tests */,
+				832FD48F20BFB08200683EB2 /* IRAlderAssignment2UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -500,12 +500,12 @@
 /* Begin PBXTargetDependency section */
 		832FD48720BFB08200683EB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 832FD46D20BFB07E00683EB2 /* IRAlderAssignment */;
+			target = 832FD46D20BFB07E00683EB2 /* IRAlderAssignment2 */;
 			targetProxy = 832FD48620BFB08200683EB2 /* PBXContainerItemProxy */;
 		};
 		832FD49220BFB08200683EB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 832FD46D20BFB07E00683EB2 /* IRAlderAssignment */;
+			target = 832FD46D20BFB07E00683EB2 /* IRAlderAssignment2 */;
 			targetProxy = 832FD49120BFB08200683EB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -705,7 +705,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRAlderAssignment.app/IRAlderAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRAlderAssignment2.app/IRAlderAssignment2";
 			};
 			name = Debug;
 		};
@@ -727,7 +727,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRAlderAssignment.app/IRAlderAssignment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRAlderAssignment2.app/IRAlderAssignment2";
 			};
 			name = Release;
 		};
@@ -776,7 +776,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		832FD46920BFB07E00683EB2 /* Build configuration list for PBXProject "IRAlderAssignment" */ = {
+		832FD46920BFB07E00683EB2 /* Build configuration list for PBXProject "IRAlderAssignment2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				832FD49720BFB08200683EB2 /* Debug */,
@@ -785,7 +785,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		832FD49920BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment" */ = {
+		832FD49920BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				832FD49A20BFB08200683EB2 /* Debug */,
@@ -794,7 +794,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		832FD49C20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignmentTests" */ = {
+		832FD49C20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				832FD49D20BFB08200683EB2 /* Debug */,
@@ -803,7 +803,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		832FD49F20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignmentUITests" */ = {
+		832FD49F20BFB08200683EB2 /* Build configuration list for PBXNativeTarget "IRAlderAssignment2UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				832FD4A020BFB08200683EB2 /* Debug */,
